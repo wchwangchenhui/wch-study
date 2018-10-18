@@ -9,7 +9,18 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CommonController {
 	
-	@RequestMapping(value="{module}/{view}")
+	@RequestMapping(value = {"/{module}", "/{module}/"})
+	public ModelAndView init(@PathVariable String module) {
+		ModelAndView mav = new ModelAndView();
+		if (StringUtils.isNotBlank(module)) {
+			mav.setViewName(module + "/" + module);
+		} else {
+			mav.setViewName("home/home");
+		}
+		return mav;
+	}
+	
+	@RequestMapping(value = {"/{module}/{view}","/{module}/{view}/"})
 	public ModelAndView init(@PathVariable String module, @PathVariable String view) {
 		ModelAndView mav = new ModelAndView();
 		if (StringUtils.isNotBlank(module)) {
