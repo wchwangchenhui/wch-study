@@ -1,5 +1,8 @@
 package com.wch.study.moudle.login.controller;
 
-public class LoginController {
+import org.springframework.web.bind.annotation.RequestMapping;
 
+@RequestMapping
+public class LoginController {
+	
 }
