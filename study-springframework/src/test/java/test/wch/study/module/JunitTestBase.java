@@ -12,7 +12,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 @RunWith(SpringRunner.class)
 @WebAppConfiguration
-@ContextConfiguration(locations = {"classpath:/spring/applicationContext.xml", "classpath:/spring/applicationContext.xml"})
+@ContextConfiguration(locations = {"classpath:/spring/applicationContext.xml", "classpath:/spring/spring-servlet.xml"})
 public class JunitTestBase {
 	
 	@Autowired
