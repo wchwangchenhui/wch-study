@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.wch.study.moudle.login.service.LoginService;
 
-@Service("loginService")
+@Service
 public class LoginServiceImpl implements LoginService {
 
 	@Override

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wch.study.moudle.menu.mapper.MenuMapper">
+  <select id="selectMenuCount" resultType="java.lang.Integer">
+    select count(0) as menu_count from menu where delete_flg = '0'
+  </select>
+  <insert id="installMenu">
+    insert menu (name, url, delete_flg, record_date, recorder_id, update_last_date, updater_last_id) 
+         values (#{name}, #{url}, '0', #{recordDate}, #{recordId}, #{recordDate}, #{recordId})
+  </insert>
+</mapper>
